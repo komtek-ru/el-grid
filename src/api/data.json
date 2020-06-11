@@ -1,0 +1,152 @@
+[
+  {
+    "id": "5ee2284749fd40de289819de",
+    "isActive": true,
+    "age": 22,
+    "name": "Mcknight Mcdaniel",
+    "gender": "male",
+    "company": "ULTRIMAX",
+    "email": "mcknightmcdaniel@ultrimax.com",
+    "phone": "+1 (867) 513-3669",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Mercado White"
+      },
+      {
+        "id": 1,
+        "name": "Coffey Joyner"
+      },
+      {
+        "id": 2,
+        "name": "Delia Church"
+      }
+    ],
+    "favoriteFruit": "banana"
+  },
+  {
+    "id": "5ee2284711ba6835183e0462",
+    "isActive": true,
+    "age": 36,
+    "name": "Ida Mathis",
+    "gender": "female",
+    "company": "EVEREST",
+    "email": "idamathis@everest.com",
+    "phone": "+1 (952) 489-3019",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Justine Hill"
+      },
+      {
+        "id": 1,
+        "name": "Munoz Clark"
+      },
+      {
+        "id": 2,
+        "name": "Solis Espinoza"
+      }
+    ],
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "id": "5ee22847991483afdbf4b428",
+    "isActive": true,
+    "age": 28,
+    "name": "Booker Ford",
+    "gender": "male",
+    "company": "EVIDENDS",
+    "email": "bookerford@evidends.com",
+    "phone": "+1 (886) 573-3382",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Marguerite Hardy"
+      },
+      {
+        "id": 1,
+        "name": "Lupe Carrillo"
+      },
+      {
+        "id": 2,
+        "name": "Chambers Valdez"
+      }
+    ],
+    "favoriteFruit": "apple"
+  },
+  {
+    "id": "5ee2284723ee1296b6d0ce20",
+    "isActive": false,
+    "age": 20,
+    "name": "Knox Hood",
+    "gender": "male",
+    "company": "INTRADISK",
+    "email": "knoxhood@intradisk.com",
+    "phone": "+1 (841) 576-3522",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Blevins Juarez"
+      },
+      {
+        "id": 1,
+        "name": "Fischer Gilmore"
+      },
+      {
+        "id": 2,
+        "name": "Madelyn Patterson"
+      }
+    ],
+    "favoriteFruit": "banana"
+  },
+  {
+    "id": "5ee22847a8853e519a08ec72",
+    "isActive": true,
+    "age": 26,
+    "name": "Griffith Herrera",
+    "gender": "male",
+    "company": "VELITY",
+    "email": "griffithherrera@velity.com",
+    "phone": "+1 (851) 530-2004",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Amanda Ewing"
+      },
+      {
+        "id": 1,
+        "name": "Myrna Zamora"
+      },
+      {
+        "id": 2,
+        "name": "Fanny Cummings"
+      }
+    ],
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "id": "5ee2284767b38513cfd15c76",
+    "isActive": true,
+    "age": 21,
+    "name": "Cortez Lott",
+    "gender": "male",
+    "company": "MANTRIX",
+    "email": "cortezlott@mantrix.com",
+    "phone": "+1 (996) 585-3820",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Stark Stanton"
+      },
+      {
+        "id": 1,
+        "name": "Burch York"
+      },
+      {
+        "id": 2,
+        "name": "Ruiz Maynard"
+      }
+    ],
+    "favoriteFruit": "banana"
+  }
+]
