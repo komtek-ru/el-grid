@@ -1,5 +1,5 @@
 {
-  "name": "el-grid",
+  "name": "@komtek/el-grid",
   "version": "0.1.0",
   "description": "A Vue.js component which combines form, table, pagination components in Element UI.",
   "author": "Komtek",
