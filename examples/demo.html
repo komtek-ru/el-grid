@@ -1,143 +1,144 @@
 <meta charset="utf-8" />
 <title>ElGrid Demo</title>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.13.2/index.js"></script>
+<head>
+  <link rel="stylesheet" href="../dist/ElGrid.css" />
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+</head>
+<body>
+  <div id="app">
+    <el-grid
+      :loading="loading"
+      type="local"
+      :data="items"
+      :columns="columns"
+      :form-options="formOptions"
+      :page-sizes="[5, 10, 25]"
+    >
+    </el-grid>
+  </div>
 
-<script src="../dist/ElGrid.umd.js"></script>
-<link rel="stylesheet" href="../dist/ElGrid.css" />
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="../dist/ElGrid.umd.js"></script>
 
-<div id="app">
-  <el-grid
-    :loading="loading"
-    type="local"
-    :data="items"
-    :columns="columns"
-    :form-options="formOptions"
-    :page-sizes="[5, 10, 25]"
-  >
-  </el-grid>
-</div>
-
-<script>
-  let items = [
-    {
-      id: '5ee22847a8853e519a08ec72',
-      isActive: true,
-      age: 26,
-      name: 'Griffith Herrera',
-      gender: 'male',
-      company: 'VELITY',
-      email: 'griffithherrera@velity.com',
-      phone: '+1 (851) 530-2004',
-      friends: [
-        {
-          id: 0,
-          name: 'Amanda Ewing'
-        },
-        {
-          id: 1,
-          name: 'Myrna Zamora'
-        },
-        {
-          id: 2,
-          name: 'Fanny Cummings'
-        }
-      ],
-      favoriteFruit: 'strawberry'
-    },
-    {
-      id: '5ee2284767b38513cfd15c76',
-      isActive: true,
-      age: 21,
-      name: 'Cortez Lott',
-      gender: 'male',
-      company: 'MANTRIX',
-      email: 'cortezlott@mantrix.com',
-      phone: '+1 (996) 585-3820',
-      friends: [
-        {
-          id: 0,
-          name: 'Stark Stanton'
-        },
-        {
-          id: 1,
-          name: 'Burch York'
-        },
-        {
-          id: 2,
-          name: 'Ruiz Maynard'
-        }
-      ],
-      favoriteFruit: 'banana'
-    }
-  ];
-
-  // Vue.component('el-grid', ElGrid);
-
-  new Vue({
-    el: '#app',
-
-    // components: {
-    //   'el-grid': ElGrid
-    // },
-
-    data() {
-      return {
-        loading: true,
-        items
-      };
-    },
-
-    computed: {
-      columns() {
-        return [
+  <script>
+    let items = [
+      {
+        id: '5ee22847a8853e519a08ec72',
+        isActive: true,
+        age: 26,
+        name: 'Griffith Herrera',
+        gender: 'male',
+        company: 'VELITY',
+        email: 'griffithherrera@velity.com',
+        phone: '+1 (851) 530-2004',
+        friends: [
           {
-            slotName: 'isActive',
-            sortable: false,
-            align: 'center',
-            width: 75
+            id: 0,
+            name: 'Amanda Ewing'
           },
           {
-            prop: 'name',
-            label: 'Name',
-            width: 300
+            id: 1,
+            name: 'Myrna Zamora'
           },
           {
-            prop: 'age',
-            label: 'Age',
-            width: 100
-          },
-          {
-            prop: 'email',
-            label: 'Email',
-            width: 250
-          },
-          {
-            prop: 'phone',
-            label: 'Phone',
-            width: 200
-          },
-          {
-            prop: 'friends',
-            label: 'Friends',
-            render: ({ friends }) => friends.map(x => x.name).join(' ')
+            id: 2,
+            name: 'Fanny Cummings'
           }
-        ];
+        ],
+        favoriteFruit: 'strawberry'
+      },
+      {
+        id: '5ee2284767b38513cfd15c76',
+        isActive: true,
+        age: 21,
+        name: 'Cortez Lott',
+        gender: 'male',
+        company: 'MANTRIX',
+        email: 'cortezlott@mantrix.com',
+        phone: '+1 (996) 585-3820',
+        friends: [
+          {
+            id: 0,
+            name: 'Stark Stanton'
+          },
+          {
+            id: 1,
+            name: 'Burch York'
+          },
+          {
+            id: 2,
+            name: 'Ruiz Maynard'
+          }
+        ],
+        favoriteFruit: 'banana'
+      }
+    ];
+
+    Vue.component('el-grid', ElGrid.default.ElGrid);
+    console.log(ElGrid);
+
+    new Vue({
+      el: '#app',
+
+      data() {
+        return {
+          loading: true,
+          items
+        };
       },
 
-      formOptions() {
-        return {
-          forms: [
-            { prop: 'name', placeholder: 'Name', width: 100 },
-            { prop: 'mail', placeholder: 'Email', width: '200px' }
-          ]
-        };
-      }
-    },
+      computed: {
+        columns() {
+          return [
+            {
+              slotName: 'isActive',
+              sortable: false,
+              align: 'center',
+              width: 75
+            },
+            {
+              prop: 'name',
+              label: 'Name',
+              width: 300
+            },
+            {
+              prop: 'age',
+              label: 'Age',
+              width: 100
+            },
+            {
+              prop: 'email',
+              label: 'Email',
+              width: 250
+            },
+            {
+              prop: 'phone',
+              label: 'Phone',
+              width: 200
+            },
+            {
+              prop: 'friends',
+              label: 'Friends',
+              render: ({ friends }) => friends.map(x => x.name).join(' ')
+            }
+          ];
+        },
 
-    created() {
-      setTimeout(() => (this.loading = false), 2000);
-    }
-  });
-</script>
+        formOptions() {
+          return {
+            forms: [
+              { prop: 'name', placeholder: 'Name', width: 100 },
+              { prop: 'mail', placeholder: 'Email', width: '200px' }
+            ]
+          };
+        }
+      },
+
+      created() {
+        setTimeout(() => (this.loading = false), 2000);
+      }
+    });
+  </script>
+</body>
