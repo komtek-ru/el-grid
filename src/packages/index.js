@@ -1,12 +1,12 @@
-import '../scss/style.scss';
-import '../directives';
+import '@/scss/style.scss';
+import '@/directives';
 
-import ButtonAction from './ButtonAction/ButtonAction';
-import ButtonDelete from './ButtonDelete/ButtonDelete';
-import ElGrid from './ElGrid/main.vue';
+import ButtonAction from './ButtonAction';
+import ButtonDelete from './ButtonDelete';
+import ElGrid from './ElGrid';
 
 const install = function(Vue, opts = {}) {
-  [ButtonAction, ButtonAction, ElGrid].map(component => {
+  [ButtonAction, ButtonDelete, ElGrid].map(component => {
     Vue.component(component.name, component);
   });
 };

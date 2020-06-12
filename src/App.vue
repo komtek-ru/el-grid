@@ -18,9 +18,9 @@
         <el-checkbox v-model="row.isActive" />
       </template>
 
-      <template #controls="{ row, $index }">
+      <template #controls="{ row}">
         <div class="d-flex justify-content-between">
-          <button-action @handler="editItem(row, $index)"></button-action>
+          <button-action @handler="editItem(row)"></button-action>
           <button-delete @handler="deleteItem(row)"></button-delete>
         </div>
       </template>
@@ -31,18 +31,8 @@
 <script>
 import items from './api/data';
 
-import ButtonAction from './packages/ButtonAction/ButtonAction';
-import ButtonDelete from './packages/ButtonDelete/ButtonDelete';
-import ElGrid from './packages/ElGrid/main.vue';
-
 export default {
   name: 'App',
-
-  components: {
-    ButtonAction,
-    ButtonDelete,
-    ElGrid
-  },
 
   data() {
     return {
@@ -83,7 +73,7 @@ export default {
         {
           prop: 'friends',
           label: 'Friends',
-          render: ({ friends }) => friends.map(x => x.name).join(' ')
+          render: ({ friends }) => friends.map(x => x.name).join(', ')
         },
         {
           slotName: 'controls',
@@ -105,7 +95,7 @@ export default {
   },
 
   methods: {
-    editItem({ name }, index) {
+    editItem({ name }) {
       alert(`Edit employee with name: ${name}`);
     },
 

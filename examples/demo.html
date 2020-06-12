@@ -15,6 +15,20 @@
       :form-options="formOptions"
       :page-sizes="[5, 10, 25]"
     >
+      <header slot="grid-header" class="padding-10">
+        <i class="header-icon"></i>
+      </header>
+
+      <div slot="isActive" slot-scope="row">
+        <el-checkbox v-model="row.isActive" />
+      </div>
+
+      <div slot="controls" slot-scope="row">
+        <div class="d-flex justify-content-between">
+          <button-action @handler="editItem(row)"></button-action>
+          <button-delete @handler="deleteItem(row)"></button-delete>
+        </div>
+      </div>
     </el-grid>
   </div>
 
@@ -77,7 +91,8 @@
     ];
 
     Vue.component('el-grid', ElGrid.default.ElGrid);
-    console.log(ElGrid);
+    Vue.component('button-action', ElGrid.default.ButtonAction);
+    Vue.component('button-delete', ElGrid.default.ButtonDelete);
 
     new Vue({
       el: '#app',
@@ -121,7 +136,13 @@
             {
               prop: 'friends',
               label: 'Friends',
-              render: ({ friends }) => friends.map(x => x.name).join(' ')
+              render: ({ friends }) => friends.map(x => x.name).join(', ')
+            },
+            {
+              slotName: 'controls',
+              sortable: false,
+              align: 'center',
+              width: 75
             }
           ];
         },
@@ -133,6 +154,19 @@
               { prop: 'mail', placeholder: 'Email', width: '200px' }
             ]
           };
+        }
+      },
+
+      methods: {
+        editItem({ name }, index) {
+          alert(`Edit employee with name: ${name}`);
+        },
+
+        deleteItem({ id }) {
+          this.items.splice(
+            this.items.findIndex(x => x.id === id),
+            1
+          );
         }
       },
 

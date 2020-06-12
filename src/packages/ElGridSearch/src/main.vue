@@ -124,7 +124,7 @@
 
           <el-tooltip effect="dark" :content="resetBtnText" placement="top-end">
             <el-button
-              :plain="true"
+              plain
               :size="size"
               v-if="showResetBtn"
               @click="resetForm"
