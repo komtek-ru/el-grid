@@ -26,26 +26,11 @@
 
   &__pagination {
     padding: 10px;
-    //background-color: #fafafa;
     border-bottom: 1px solid #ebeef5;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .el-pagination.is-background .btn-next,
-    .el-pagination.is-background .btn-prev,
-    .el-pagination.is-background .el-pager li {
-      //background-color: #fafafa;
-    }
   }
-
-  //.el-select .el-input {
-  //    width: 110px;
-  //}
-
-  //.el-form-item:not(:last-child) {
-  //    margin-bottom: 8px !important;
-  //}
 
   .el-form--inline .el-form-item {
     margin-bottom: 0 !important;

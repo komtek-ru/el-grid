@@ -139,6 +139,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+import '@/directives';
 import { formProps } from './props';
 
 export default {

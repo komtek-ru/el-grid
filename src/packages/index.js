@@ -1,5 +1,4 @@
 import '@/scss/style.scss';
-import '@/directives';
 
 import ButtonAction from './ButtonAction';
 import ButtonDelete from './ButtonDelete';

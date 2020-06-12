@@ -1,2 +1,0 @@
-import './ElementUI';
-import './VueAxios';

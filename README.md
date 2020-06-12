@@ -11,15 +11,26 @@
 
 ![](./docs/usage.gif)
 
+## Install to project
+
+```
+npm i @komtek/el-grid
+```
+
 ## Import to project
 
 ```
-import { ButtonAction, ButtonDelete, ElGrid } from '@komtek/el-grid'
+import ElGrid from '@komtek/el-grid'
+import '@komtek/el-grid/dist/el-grid.css'
 
 Vue.use(ElGrid)
-Vue.use(ButtonAction)
-Vue.use(ButtonDelete)
+```
 
+## Basic usage
+
+See full [example](./examples/demo.html)
+
+```
 <el-grid
   :loading="loading"
   type="local"
@@ -43,13 +54,7 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Compiles and minifies as package
+### Compiles and minifies as package for production
 
 ```
 npm run lib:build
