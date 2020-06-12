@@ -150,7 +150,7 @@
 <script>
 import Vue from 'vue';
 import props from './props';
-import searchForm from '../ElGridSearch/main.vue';
+import searchForm from '@/packages/ElGridSearch/src/main.vue';
 import { orderBy, compare } from 'natural-orderby';
 
 export default {
@@ -291,11 +291,6 @@ export default {
                       .toLowerCase()
                       .trim()
             );
-            // } else {
-            // valids.push(
-            //   paramFuzzy && paramFuzzy[vv] ? ((v[vv]).indexOf(mergeParams[vv]) !== -1) : ((v[vv]) === mergeParams[vv])
-            // )
-            // }
           });
           return valids.every(vvv => {
             return vvv;

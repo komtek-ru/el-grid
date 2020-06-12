@@ -3,7 +3,7 @@
     <el-tooltip
       slot="reference"
       effect="dark"
-      content="Удалить"
+      :content="deleteText"
       placement="top-end"
       :enterable="false"
       transition=""
@@ -19,14 +19,14 @@
       </el-button>
     </el-tooltip>
 
-    <p>{{ text }}</p>
+    <p>{{ confirmText }}</p>
 
     <div class="tooltip-button">
       <el-button type="danger" size="mini" :disabled="!visible" v-on:click.stop="handler">
-        Удалить
+        {{ deleteText }}
       </el-button>
       <el-button size="mini" @click="visible = false">
-        Отмена
+        {{ cancelText }}
       </el-button>
     </div>
   </el-popover>
@@ -41,9 +41,17 @@ export default {
   }),
 
   props: {
-    text: {
+    confirmText: {
       type: String,
       default: 'Удалить данный пункт?'
+    },
+    deleteText: {
+      type: String,
+      default: 'Удалить'
+    },
+    cancelText: {
+      type: String,
+      default: 'Отмена'
     },
     placement: {
       type: String,

@@ -1,18 +1,20 @@
 {
-  "name": "el-grid",
-  "version": "0.1.0",
-  "description": "A Vue.js component which combines form, table, pagination components in Element UI.",
+  "name": "@komtek/el-grid",
+  "version": "0.1.1",
+  "description": "A Vue.js component which combines form, table, pagination components from Element UI.",
   "author": "Komtek",
   "license": "MIT",
   "keywords": [
-    "Element UI",
-    "Vue",
+    "el-grid",
+    "vue",
+    "element-ui",
+    "datasource",
     "grid",
     "form",
     "table",
     "pagination"
   ],
-  "main": "dist/ElGrid.common.js",
+  "main": "dist/el-grid.common.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/komtek-ru/el-grid.git"
@@ -21,7 +23,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib:build": "vue-cli-service build --target lib --name ElGrid ./src/packages/index.js",
+    "lib:build": "vue-cli-service build --target lib --name el-grid ./src/packages/index.js",
     "lib:publish": "npm run lib:build && npm publish",
     "lib:publish:alpha": "npm run lib:build && npm publish --tag alpha"
   },
@@ -29,8 +31,7 @@
     "axios": "^0.19.2",
     "inputmask": "^5.0.3",
     "natural-orderby": "^2.0.3",
-    "vue": "^2.6.11",
-    "vue-axios": "^2.1.5"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.1",

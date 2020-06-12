@@ -9,10 +9,7 @@ export default Vue.directive('mask', {
           ? {
               alias: 'datetime',
               inputFormat: binding.value,
-              placeholder: binding.value.replace(
-                /\w/gi,
-                char => ({ d: 'д', m: 'м', y: 'г', h: 'ч' }[char.toLocaleLowerCase()])
-              )
+              placeholder: binding.value
             }
           : binding.value;
 

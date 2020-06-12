@@ -124,7 +124,7 @@
 
           <el-tooltip effect="dark" :content="resetBtnText" placement="top-end">
             <el-button
-              :plain="true"
+              plain
               :size="size"
               v-if="showResetBtn"
               @click="resetForm"
@@ -139,6 +139,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+import '@/directives';
 import { formProps } from './props';
 
 export default {
